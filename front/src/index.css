@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a.active hr{
+    display: block;
+}
+
+a.active p{
+    color: #4f46e5;
+    font-weight:600;
+}
+
+
+
+@media (max-width:640px) {
+    a{
+        padding: 2px;
+        padding-left: 8px;
+        
+    }
+    a.active{
+        border: solid;
+        /* color: #4f46e5; */
+        border-color: #4f46e5;
+        border-radius: 5px;
+    }
+    a.active hr{
+        display: none;
+    }
+    a.active p{
+        color: #4f46e5;
+        
+    }
+    
+}
