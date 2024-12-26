@@ -15,12 +15,16 @@ import Error from './pages/Error';
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Pricing from './pages/Pricing';
+import Will from './components/Essentails/Will';
+import Gst from './components/Essentails/Gst';
+import Rti from './components/Essentails/Rti';
+import EmploymentContracts from './components/Essentails/EmploymentContracts';
 const App = () => {
   const location = useLocation();
 
   // Define routes where Navbar and Footer should be hidden
   const hideNavbarFooterRoutes = ['/login', '/signup'];
-  const isErrorPage = location.pathname === '*' || !['/', '/about', '/blog', '/blog/:id', '/faqs', '/contact', '/signup', '/login', '/testimonials', '/pricing'].includes(location.pathname);
+  const isErrorPage = location.pathname === '*' || !['/', '/about', '/blog', '/blog/:id', '/faqs', '/contact', '/signup', '/login', '/testimonials', '/pricing','/will','/gst','/rti'].includes(location.pathname);
 
   const shouldHideNavbarFooter = hideNavbarFooterRoutes.includes(location.pathname) || isErrorPage;
 
@@ -34,6 +38,10 @@ const App = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogDetail />} />
         <Route path="/faqs" element={<Faqs />} />
+        <Route path="/will" element={<Will />} />
+        <Route path="/gst" element={<Gst />} />
+        <Route path="/rti" element={<Rti />} />
+        <Route path="/employmentContracts" element={<EmploymentContracts />} />
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/signup" element={<Signup />} />

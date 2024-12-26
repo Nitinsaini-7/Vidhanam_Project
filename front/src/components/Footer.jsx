@@ -16,8 +16,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div className="md:block flex items-center justify-center">
-            <div className="flex justify-center bg-white w-14 h-14 items-center rounded-full ">
-              <img src={logo} className="w-10" alt="" />
+            <div className="flex justify-center w-14 h-14 bg-white rounded-full items-center ">
+              <img src={logo} className="w-16 p-0.5 rounded-full" alt="" />
             </div>
 
             </div>

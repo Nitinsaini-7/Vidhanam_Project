@@ -1,4 +1,4 @@
-import logo from "../src/assets/images/law-scale.png";
+import logo from "../src/assets/images/vidhanam.png";
 import blog_image1 from "../src/assets/images/blog1.jpg";
 import blog_image2 from "../src/assets/images/blog2.jpg";
 import blog_image3 from "../src/assets/images/blog3.jpg";

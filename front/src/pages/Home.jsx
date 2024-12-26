@@ -1,6 +1,6 @@
 import React from 'react'
 import Hero from '../components/Hero'
-import Essential from '../components/Essential'
+import Essential from '../components/Essentails/Essential'
 import HowItWorks from './HowItWorks'
 import Testimonials from './Testimonials'
 import Blog from './blog/Blog'

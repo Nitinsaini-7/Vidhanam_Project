@@ -3,7 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../data";
 import { AuthContext } from "../context/AuthContext";
 import { useContext } from "react";
-import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 
@@ -32,15 +31,15 @@ const Navbar = () => {
       className=" bg-indigo-100 backdrop-blur-md bg-opacity-70 shadow-lg w-full py-0 z-50 fixed top-0 left-0 md:text-sm"
     >
       <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
-        <div className="flex items-center justify-between py-2 md:py-3 md:block">
+        <div className="flex items-center justify-between py-2 md:block">
           <Link
             onClick={() => {
               window.scroll(0, 0);
             }}
             to="/"
           >
-            <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-              <img src={logo} className="w-6" alt="Float UI logo" />
+            <div className="w-16 rounded-full flex items-center justify-center">
+              <img src={logo} className="md:w-14 w-12 rounded-full" alt="Float UI logo" />
             </div>
           </Link>
           <div className="md:hidden">
