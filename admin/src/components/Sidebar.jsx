@@ -3,13 +3,21 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAddressCard } from "@fortawesome/free-regular-svg-icons";
-import {  faUsers, faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import {  faUsers, faArrowRightFromBracket, faHome } from '@fortawesome/free-solid-svg-icons';
 
 // import { Link } from "react-router-dom";
 
 const Sidebar = ({setToken}) => {
 
     const navigation = [
+      {
+        
+        name: "Home",
+        route:"/",
+        icon: (
+          <FontAwesomeIcon icon={faHome}/>
+        ),
+      },
       {
         
         name: "Users",
@@ -45,13 +53,13 @@ const Sidebar = ({setToken}) => {
     <nav className="w-20 bg-slate-100 min-h-screen space-y-8">
         <div className="flex fixed flex-col justify-center w-20 bg-slate-200 h-full">
           <div className="h-20 flex items-center justify-center">
-            <a className="flex-none">
+            
               <img
-                src="https://floatui.com/logo-letter.png"
-                width={35}
-                className="mx-auto"
+                src="/vidhanam.png"
+                width={50}
+                className="mx-auto rounded-full"
               />
-            </a>
+            
           </div>
           <div className="flex-1 flex flex-col h-full">
             <ul className="px-4 text-sm font-medium flex-1">

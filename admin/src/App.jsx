@@ -7,6 +7,7 @@ import Login from "./components/Login";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import UsersData from "./pages/UsersData";
+import Hero from "./components/Hero";
 
 export const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
@@ -31,6 +32,7 @@ const App = () => {
 
             <div className="w-[70%] mx-auto ml-[max(5vw,25px)] my8 text-gray-600 text-base">
               <Routes>
+                <Route path="/" element={<Hero />} />
                 <Route path="/data" element={<FormData />} />
                 <Route path="/usersData" element={<UsersData />} />
               </Routes>

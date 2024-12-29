@@ -77,8 +77,10 @@ const FormData = () => {
                     {contact.email}
                   </Link>
                 </td>
-                <td className="border border-gray-300 px-4 py-2">
+                <td className="border border-gray-300 px-4 py-2 text-blue-600">
+                  <Link to={`tel:${contact.phone}`}>
                   {contact.phone}
+                  </Link>
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {contact.subject}

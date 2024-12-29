@@ -44,11 +44,13 @@ const UsersData = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   {user.name}
                 </td>
-                <td className="border border-gray-300 px-4 py-2">
+                <td className="border border-gray-300 px-4 py-2 text-blue-600">
                   <Link to={`mailto:${user.email}`}>{user.email}</Link>
                 </td>
-                <td className="border border-gray-300 px-4 py-2">
+                <td className="border border-gray-300 px-4 py-2 text-blue-600">
+                  <Link to={`tel:${user.phone}`} >
                   {user.phone}
+                  </Link>
                 </td>
               </tr>
             ))}
