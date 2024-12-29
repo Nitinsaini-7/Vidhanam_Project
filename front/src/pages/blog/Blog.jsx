@@ -35,7 +35,7 @@ const Blog = () => {
                 </div>
                 <div className="">
                   <Link
-                    className="border-indigo-600 border rounded-full  p-2 hover:bg-indigo-600 hover:text-white duration-200 text-indigo-600"
+                    className="border-indigo-600 border rounded-md  p-2 hover:bg-indigo-600 hover:text-white duration-200 text-indigo-600"
                     to={`/blog/${items.id}`}
                     onClick={() => {
                       window.scroll(0, 0);
