@@ -95,7 +95,7 @@ const Navbar = () => {
               {token ? (
                 <button
                   onClick={logout}
-                  className="bg-red-500 flex gap-2 items-center justify-center p-2 text-white rounded-md"
+                  className="bg-red-500 flex gap-2 w-full items-center justify-center p-2 text-white rounded-md"
                 >
                   Logout{" "}
                   <FontAwesomeIcon

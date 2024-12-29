@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { backendUrl } from "../App";
 
 const FormData = () => {
   const [contacts, setContacts] = useState([]);
@@ -9,7 +10,7 @@ const FormData = () => {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const response = await fetch("http://localhost:3000/data");
+        const response = await fetch(backendUrl + "/api/data");
         if (!response.ok) {
           throw new Error("Failed to fetch contacts");
         }

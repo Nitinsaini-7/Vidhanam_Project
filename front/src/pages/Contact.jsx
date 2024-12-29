@@ -4,10 +4,11 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useContext } from "react";
 import Title from "../components/Title";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { AuthContext } from "../context/AuthContext";
 
 const Contact = () => {
   const contactMethods = [
@@ -25,6 +26,8 @@ const Contact = () => {
     },
   ];
 
+    const { backendUrl } = useContext(AuthContext);
+  
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -38,7 +41,7 @@ const Contact = () => {
     };
 
     try {
-      const response = await axios.post("http://localhost:3000/data", data);
+      const response = await axios.post(backendUrl + "/api/data", data);
       toast.success(response.data.message);
       e.target.reset();
     } catch (error) {

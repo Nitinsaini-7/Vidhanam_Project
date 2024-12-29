@@ -8,8 +8,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express()
-// const { default: userRouter } = require('./routes/userRoute.js');
-
+const port = process.env.PORT || 3001;
 
 connectionDB;
 // dataModel;
@@ -18,15 +17,15 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res)=>{
-    res.send("hii")
+    res.send("Api is running")
 })
 
-app.use("/data", dataRouter)
+app.use("/api/data", dataRouter)
 app.use('/api/user', userRouter)
-app.use('/usersData',usersDataRouter)
+app.use('/api/usersData',usersDataRouter)
 // app.use("/datashow", dataRouter)
 
-app.listen(3000, ()=>{
-    console.log("Server running");
+app.listen(port, ()=>{
+    console.log(`Server running: ${port}`);
     
 })
