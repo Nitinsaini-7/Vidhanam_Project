@@ -4,7 +4,7 @@ const Rti = () => {
   return (
     <div className="p-8 mx-auto">
         <div className="text-center">
-            <h1 className="text-4xl font-bold pt-10">RTI</h1>
+            <h1 className="text-4xl font-bold pt-10">Right to Information (RTI)</h1>
         </div>
       <h2 className="text-2xl font-semibold mt-8 mb-4">What is the Right to Information (RTI)?</h2>
 

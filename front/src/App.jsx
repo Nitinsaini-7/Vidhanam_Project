@@ -19,12 +19,15 @@ import Will from './components/Essentails/Will';
 import Gst from './components/Essentails/Gst';
 import Rti from './components/Essentails/Rti';
 import EmploymentContracts from './components/Essentails/EmploymentContracts';
+import TermsAndConditions from './pages/TermsAndConditions';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import Disclaimer from './pages/Disclaimer';
 const App = () => {
   const location = useLocation();
 
   // Define routes where Navbar and Footer should be hidden
   const hideNavbarFooterRoutes = ['/login', '/signup'];
-  const isErrorPage = location.pathname === '*' || !['/', '/about', '/blog', '/blog/:id', '/faqs', '/contact', '/signup', '/login', '/testimonials', '/pricing','/will','/gst','/rti'].includes(location.pathname);
+  const isErrorPage = location.pathname === '*' || !['/', '/about', '/blog', '/blog/:id', '/faqs', '/contact', '/signup', '/login', '/testimonials', '/pricing','/will','/gst','/rti','/contracts'].includes(location.pathname);
 
   const shouldHideNavbarFooter = hideNavbarFooterRoutes.includes(location.pathname) || isErrorPage;
 
@@ -41,12 +44,15 @@ const App = () => {
         <Route path="/will" element={<Will />} />
         <Route path="/gst" element={<Gst />} />
         <Route path="/rti" element={<Rti />} />
-        <Route path="/employmentContracts" element={<EmploymentContracts />} />
+        <Route path="/contracts" element={<EmploymentContracts />} />
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/terms-conditions" element={<TermsAndConditions/>} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
+        <Route path="/disclaimer" element={<Disclaimer/>} />
         <Route path="*" element={<Error />} />
       </Routes>
       {!shouldHideNavbarFooter && <Footer />}

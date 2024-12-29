@@ -40,7 +40,7 @@ const Testimonials = () => {
         ssr={true} 
         infinite={true}
         autoPlay={false}
-        autoPlaySpeed={2000}
+        autoPlaySpeed={1000}
         keyBoardControl={true}
         transitionDuration={500}
         containerClass="carousel-container"

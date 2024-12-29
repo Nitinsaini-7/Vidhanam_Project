@@ -1,14 +1,31 @@
 import logo from "../src/assets/images/vidhanam.png";
+import hero from "../src/assets/images/hero.jpg";
 import blog_image1 from "../src/assets/images/blog1.jpg";
 import blog_image2 from "../src/assets/images/blog2.jpg";
 import blog_image3 from "../src/assets/images/blog3.jpg";
 import blog_image4 from "../src/assets/images/blog4.jpg";
 import blog_image5 from "../src/assets/images/blog5.jpg";
-import testimonials1 from "../src/assets/images/testimonials1.png"
-import testimonials2 from "../src/assets/images/testimonials2.png"
+import testimonials1 from "../src/assets/images/testimonials1.png";
+import testimonials2 from "../src/assets/images/testimonials2.png";
+import linkedin from "../src/assets/images/linkedin.png";
+import x from "../src/assets/images/x.png";
+import instagram from "../src/assets/images/instagram.png";
+import facebook from "../src/assets/images/facebook.png";
+import menuBar from "../src/assets/images/bar.png";
+import closeBar from "../src/assets/images/close.png";
+import about from "../src/assets/images/about.jpg";
 
-
-export default logo;
+export {
+  logo,
+  hero,
+  menuBar,
+  closeBar,
+  linkedin,
+  x,
+  instagram,
+  facebook,
+  about,
+};
 
 export const blogData = [
   {
@@ -247,37 +264,28 @@ export const faqsList = [
 
 export const essentialData = [
   {
-    icon: (
-      ""
-    ),
+    icon: "",
     title: "To Avoid family disputes",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus.",
   },
   {
-    icon: (
-     ""
-    ),
+    icon: "",
     title: "To ensure guardianship of minor children",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus.",
   },
   {
-    icon: (
-     
-      ""
-    ),
+    icon: "",
     title: "Having a Will reduces legal complications",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus.",
   },
   {
-    icon: (
-    ""
-    ),
+    icon: "",
     title: "To control who receives your assets",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus.",
   },
 ];
 
-export  const testimonialsData = [
+export const testimonialsData = [
   {
     name: "Bharat",
     service: "Rental Agreement",

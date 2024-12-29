@@ -22,7 +22,7 @@ const BlogDetail = () => {
     <div className="container mx-auto p-4 mt-20">
       <h1 className="text-3xl font-bold mb-4">{blog.title}</h1>
       <div>
-        <img src={blog.img} alt={blog.title} className="w-full h-auto mb-6" />
+        <img src={blog.img} alt={blog.title} className="w-full h-full mb-6 rounded-md" />
       </div>
 
       <div className="space-y-4">

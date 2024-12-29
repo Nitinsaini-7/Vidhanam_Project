@@ -1,13 +1,13 @@
 import React from "react";
-import logo from "../data";
-import linkedin from '../assets/images/linkedin.png'
-import x from '../assets/images/x.png'
-import instagram from '../assets/images/instagram.png'
-import facebook from '../assets/images/facebook.png'
+import { logo } from "../data";
+import { linkedin, x, facebook, instagram } from "../data";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-
+import {
+  faLocationDot,
+  faPhone,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
@@ -16,10 +16,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div className="md:block flex items-center justify-center">
-            <div className="flex justify-center w-14 h-14 bg-white rounded-full items-center ">
-              <img src={logo} className="w-16 p-0.5 rounded-full" alt="" />
-            </div>
-
+              <div className="flex justify-center w-14 h-14 bg-white rounded-full items-center ">
+                <img src={logo} className="w-16 p-0.5 rounded-full" alt="" />
+              </div>
             </div>
 
             <p className="mt-6 max-w-md text-center leading-relaxed text-white sm:max-w-xs sm:text-left">
@@ -29,19 +28,35 @@ const Footer = () => {
 
             <ul className="mt-8 flex justify-center gap-6 sm:justify-start md:gap-6">
               <li className=" bg-white rounded-full shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] w-12 h-12 cursor-pointer group flex items-center justify-center">
-                <img className="w-8 p-1 group-hover:w-9 duration-200" src={linkedin} alt="" />
-              </li>
-            
-              <li className="bg-white rounded-full shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] w-12 h-12 cursor-pointer group flex items-center justify-center">
-                <img className="w-8 p-1 group-hover:w-9 duration-200" src={x} alt="" />
-              </li>
-
-              <li className="bg-white rounded-full shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] w-12 h-12 cursor-pointer group flex items-center justify-center">
-                <img className="w-8 p-1 group-hover:w-9 duration-200" src={instagram} alt="" />
+                <img
+                  className="w-8 p-1 group-hover:w-9 duration-200"
+                  src={linkedin}
+                  alt=""
+                />
               </li>
 
               <li className="bg-white rounded-full shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] w-12 h-12 cursor-pointer group flex items-center justify-center">
-                <img className="w-8 p-1 group-hover:w-9 duration-200" src={facebook} alt="" />
+                <img
+                  className="w-8 p-1 group-hover:w-9 duration-200"
+                  src={x}
+                  alt=""
+                />
+              </li>
+
+              <li className="bg-white rounded-full shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] w-12 h-12 cursor-pointer group flex items-center justify-center">
+                <img
+                  className="w-8 p-1 group-hover:w-9 duration-200"
+                  src={instagram}
+                  alt=""
+                />
+              </li>
+
+              <li className="bg-white rounded-full shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] w-12 h-12 cursor-pointer group flex items-center justify-center">
+                <img
+                  className="w-8 p-1 group-hover:w-9 duration-200"
+                  src={facebook}
+                  alt=""
+                />
               </li>
             </ul>
           </div>
@@ -54,21 +69,9 @@ const Footer = () => {
                 <li>
                   <Link
                     className="text-white transition hover:text-white/75"
-                    to="#"
-                    onClick={()=>{
-                      window.scroll(0,0);
-                    }}
-                  >
-                    How it Works
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    className="text-white transition hover:text-white/75"
                     to="/testimonials"
-                    onClick={()=>{
-                      window.scroll(0,0);
+                    onClick={() => {
+                      window.scroll(0, 0);
                     }}
                   >
                     Testimonials
@@ -79,8 +82,8 @@ const Footer = () => {
                   <Link
                     className="text-white transition hover:text-white/75"
                     to="blog"
-                    onClick={()=>{
-                      window.scroll(0,0);
+                    onClick={() => {
+                      window.scroll(0, 0);
                     }}
                   >
                     Blogs
@@ -91,8 +94,8 @@ const Footer = () => {
                   <Link
                     className="text-white transition hover:text-white/75"
                     to="/faqs"
-                    onClick={()=>{
-                      window.scroll(0,0);
+                    onClick={() => {
+                      window.scroll(0, 0);
                     }}
                   >
                     Faqs
@@ -103,8 +106,8 @@ const Footer = () => {
                   <Link
                     className="text-white transition hover:text-white/75"
                     to="/about"
-                    onClick={()=>{
-                      window.scroll(0,0);
+                    onClick={() => {
+                      window.scroll(0, 0);
                     }}
                   >
                     About Us
@@ -115,14 +118,13 @@ const Footer = () => {
                   <Link
                     className="text-white transition hover:text-white/75"
                     to="/contact"
-                    onClick={()=>{
-                      window.scroll(0,0);
+                    onClick={() => {
+                      window.scroll(0, 0);
                     }}
                   >
                     Contact Us
                   </Link>
                 </li>
-                
               </ul>
             </div>
 
@@ -134,8 +136,8 @@ const Footer = () => {
                   <Link
                     className="text-white transition hover:text-white/75"
                     to="#"
-                    onClick={()=>{
-                      window.scroll(0,0);
+                    onClick={() => {
+                      window.scroll(0, 0);
                     }}
                   >
                     Will Drafting
@@ -146,8 +148,8 @@ const Footer = () => {
                   <Link
                     className="text-white transition hover:text-white/75"
                     to="#"
-                    onClick={()=>{
-                      window.scroll(0,0);
+                    onClick={() => {
+                      window.scroll(0, 0);
                     }}
                   >
                     Will Review
@@ -158,8 +160,8 @@ const Footer = () => {
                   <Link
                     className="text-white transition hover:text-white/75"
                     to="#"
-                    onClick={()=>{
-                      window.scroll(0,0);
+                    onClick={() => {
+                      window.scroll(0, 0);
                     }}
                   >
                     Will Registration
@@ -170,8 +172,8 @@ const Footer = () => {
                   <Link
                     className="text-white transition hover:text-white/75"
                     to="#"
-                    onClick={()=>{
-                      window.scroll(0,0);
+                    onClick={() => {
+                      window.scroll(0, 0);
                     }}
                   >
                     Will Probate
@@ -187,24 +189,35 @@ const Footer = () => {
                 <li>
                   <Link
                     className="text-white transition hover:text-white/75"
-                    to="#"
-                    onClick={()=>{
-                      window.scroll(0,0);
+                    to="terms-conditions"
+                    onClick={() => {
+                      window.scroll(0, 0);
                     }}
                   >
-                    Terms of Use
+                    Terms & Conditions
                   </Link>
                 </li>
 
                 <li>
                   <Link
                     className="text-white transition hover:text-white/75"
-                    to="#"
-                    onClick={()=>{
-                      window.scroll(0,0);
+                    to="/privacy-policy"
+                    onClick={() => {
+                      window.scroll(0, 0);
                     }}
                   >
                     Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="text-white transition hover:text-white/75"
+                    to="/disclaimer"
+                    onClick={() => {
+                      window.scroll(0, 0);
+                    }}
+                  >
+                    Disclaimer
                   </Link>
                 </li>
               </ul>
@@ -215,10 +228,7 @@ const Footer = () => {
 
               <ul className="mt-8 space-y-4 text-sm">
                 <li>
-                  <Link
-                    className=""
-                    to="mailto:saini00nitin@gmail.com"
-                  >
+                  <Link className="" to="mailto:saini00nitin@gmail.com">
                     <FontAwesomeIcon className="text-white" icon={faEnvelope} />
 
                     <span className="flex-1 text-white ml-2">john@doe.com</span>
@@ -226,22 +236,22 @@ const Footer = () => {
                 </li>
 
                 <li>
-                  <Link
-                    className=""
-                    to="tel:7452863255"
-                  >
-                    <FontAwesomeIcon className="text-white" icon={faPhone}/>
+                  <Link className="" to="tel:7452863255">
+                    <FontAwesomeIcon className="text-white" icon={faPhone} />
                     <span className="flex-1 text-white ml-2">0123456789</span>
                   </Link>
                 </li>
 
                 <li>
-                <Link to="" className="">
-                  <FontAwesomeIcon className="text-white" icon={faLocationDot}/>
-                  <span className="flex-1 text-white ml-2">
-                    213 Lane, London, United Kingdom
-                  </span>
-                </Link>
+                  <Link to="" className="">
+                    <FontAwesomeIcon
+                      className="text-white"
+                      icon={faLocationDot}
+                    />
+                    <span className="flex-1 text-white ml-2">
+                      213 Lane, London, United Kingdom
+                    </span>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -251,34 +261,17 @@ const Footer = () => {
         <div className="mt-12 border-t border-gray-100 pt-6">
           <div className="text-center sm:flex sm:justify-between sm:text-left">
             <p className="text-sm text-white">
-              <span className="block sm:inline">© 2022 - All Rights with legaldocs </span>
+              <span className="block sm:inline">
+                © 2024 - All Rights Reserved{" "}
+              </span>
 
-              <Link
-                className="inline-block text-white underline transition hover:text-white/75"
-                to="#"
-                onClick={()=>{
-                  window.scroll(0,0);
-                }}
-              >
-                Terms & Conditions
-              </Link>
-
-              <span> &middot; </span>
-
-              <Link
-                className="inline-block text-white underline transition hover:text-white/75"
-                to="#"
-              >
-                Privacy Policy
-              </Link>
             </p>
 
-        
-          <p className="mt-4 text-sm text-white sm:mt-0">
-            <Link to={"https://shreeradhatechnology.com/"}>
-               Made by SR Techlology
-            </Link>
-          </p>
+            <p className="mt-4 text-sm text-white sm:mt-0">
+              <Link to={"https://shreeradhatechnology.com/"}>
+                Made by SR Techlology
+              </Link>
+            </p>
           </div>
         </div>
       </div>

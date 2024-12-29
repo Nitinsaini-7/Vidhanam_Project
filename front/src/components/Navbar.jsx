@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../data";
+// import  from "../data";
+import {logo, menuBar,closeBar } from "../data";
 import { AuthContext } from "../context/AuthContext";
 import { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -28,7 +29,7 @@ const Navbar = () => {
   return (
     <nav
       style={{ background: "" }}
-      className=" bg-indigo-100 backdrop-blur-md bg-opacity-70 shadow-lg w-full py-0 z-50 fixed top-0 left-0 md:text-sm"
+      className=" bg-indigo-200 backdrop-blur-md bg-opacity-70 shadow-lg w-full py-0 z-50 fixed top-0 left-0 md:text-sm"
     >
       <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
         <div className="flex items-center justify-between py-2 md:block">
@@ -44,37 +45,13 @@ const Navbar = () => {
           </Link>
           <div className="md:hidden">
             <button
-              className="text-gray-500 hover:text-gray-800"
+              className="text-gray-500 flex items-center justify-center hover:text-gray-800"
               onClick={() => setState(!state)}
             >
               {state ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <img src={closeBar} alt="" className="w-6" />
               ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  />
-                </svg>
+                <img src={menuBar} alt="" className="w-8" />
               )}
             </button>
           </div>
@@ -84,7 +61,7 @@ const Navbar = () => {
             state ? "block" : "hidden"
           }`}
         >
-          <ul className="justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
+          <ul className="justify-end items-center text-center md:h-auto h-screen space-y-6 md:flex md:space-x-6 md:space-y-0">
             {navigation.map((item, index) => (
               <li
                 key={index}
@@ -103,17 +80,18 @@ const Navbar = () => {
                 </NavLink>
               </li>
             ))}
+            
             <li className="hover:text-indigo-600 text-lg duration-200">
               {
-                <NavLink to={"/pricing"} onClick={() => setState(false)}>
+                <NavLink to={"/pricing"} onClick={() => setState(false)} className="block">
                   <p>Pricing</p>
                   <hr className="w-4/4 border-none h-1 bg-indigo-600 hidden" />
                 </NavLink>
               }
             </li>
             <p></p>
-            <span className="hidden w-px h-6 bg-gray-300 md:block"></span>
-            <div className="">
+            {/* <span className="hidden w-px h-6 bg-gray-300 md:block"></span> */}
+            <div className="md:pt-0 pt-72">
               {token ? (
                 <button
                   onClick={logout}

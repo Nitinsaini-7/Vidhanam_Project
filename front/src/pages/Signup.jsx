@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../data";
+import {logo} from "../data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { useEffect } from "react";
@@ -57,10 +57,10 @@ const Signup = () => {
 
   return (
     <div className="w-full h-screen flex flex-col items-center justify-center px-5">
-      <div className="max-w-lg p-5 space-y-4 w-full hover:shadow-xl duration-200 border border-gray-50 text-gray-600 shadow-[rgba(17,_17,_26,_0.1)_0px_4px_12px] rounded-md ">
+      <div className="max-w-lg p-2 px-5 space-y-4 w-full hover:shadow-xl duration-200 border border-gray-50 text-gray-600 shadow-[rgba(17,_17,_26,_0.1)_0px_4px_12px] rounded-md ">
         <div className="text-center">
-          <img src={logo} width={50} className="mx-auto" />
-          <div className="mt-5 space-y-2">
+          <img src={logo} width={50} className="mx-auto rounded-full" />
+          <div className="mt-2 space-y-2">
             <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">
               Create an account
             </h3>
@@ -138,7 +138,9 @@ const Signup = () => {
           </p>
         </div>
       </div>
-      
+      <Link to={'/'} className="text-indigo-600 my-4 hover:text-indigo-500 duration-200">
+            ← Back Home 
+            </Link>
     </div>
   );
 };
