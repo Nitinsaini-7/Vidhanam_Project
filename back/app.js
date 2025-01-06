@@ -5,6 +5,7 @@ import userRouter from './routes/userRoute.js';
 import dataRouter from './routes/dataRoute.js'
 import usersDataRouter from './routes/usersData.js';
 import dotenv from 'dotenv';
+import paymentRouter from './routes/paymentRoutes.js';
 dotenv.config();
 
 const app = express()
@@ -23,6 +24,7 @@ app.get("/", (req, res)=>{
 app.use("/api/data", dataRouter)
 app.use('/api/user', userRouter)
 app.use('/api/usersData',usersDataRouter)
+app.use('/api/payment',paymentRouter)
 // app.use("/datashow", dataRouter)
 
 app.listen(port, ()=>{

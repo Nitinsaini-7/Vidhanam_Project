@@ -135,48 +135,48 @@ const Footer = () => {
                 <li>
                   <Link
                     className="text-white transition hover:text-white/75"
-                    to="#"
+                    to="/will"
                     onClick={() => {
                       window.scroll(0, 0);
                     }}
                   >
-                    Will Drafting
+                    Will
                   </Link>
                 </li>
 
                 <li>
                   <Link
                     className="text-white transition hover:text-white/75"
-                    to="#"
+                    to="/gst"
                     onClick={() => {
                       window.scroll(0, 0);
                     }}
                   >
-                    Will Review
+                    GST
                   </Link>
                 </li>
 
                 <li>
                   <Link
                     className="text-white transition hover:text-white/75"
-                    to="#"
+                    to="/rti"
                     onClick={() => {
                       window.scroll(0, 0);
                     }}
                   >
-                    Will Registration
+                    RTI
                   </Link>
                 </li>
 
                 <li>
                   <Link
                     className="text-white transition hover:text-white/75"
-                    to="#"
+                    to="/contracts"
                     onClick={() => {
                       window.scroll(0, 0);
                     }}
                   >
-                    Will Probate
+                    Contract
                   </Link>
                 </li>
               </ul>
@@ -267,9 +267,9 @@ const Footer = () => {
 
             </p>
 
-            <p className="mt-4 text-sm text-white sm:mt-0">
+            <p className="mt-4 text-sm text-white sm:mt-0 hover:text-gray-300 duration-200">
               <Link to={"https://shreeradhatechnology.com/"}>
-                Made by SR Techlology
+                Developed by SR Techlology
               </Link>
             </p>
           </div>

@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Blog from './pages/blog/Blog';
-import BlogDetail from './pages/blog/BlogDetail';
+// import BlogDetail from './pages/blog/BlogDetail';
 import Faqs from './pages/faqs/Faqs';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
@@ -39,7 +39,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:id" element={<BlogDetail />} />
+        {/* <Route path="/blog/:id" element={<BlogDetail />} /> */}
         <Route path="/faqs" element={<Faqs />} />
         <Route path="/will" element={<Will />} />
         <Route path="/gst" element={<Gst />} />
