@@ -43,10 +43,10 @@ const Hero = () => {
                 className="text-xl md:text-3xl text-white"
                 sequence={[
                   // Same substring at the start will only be typed out once, initially
-                  "Secure your family with a legal Will.",
+                  "Providing assistance and guidance in making Quality Documents",
                   1000, // wait 1s before replacing "Mice" with "Hamsters"
-                  "Secure your family with a binding document",
-                  1000,
+                  // "Secure your family with a binding document",
+                  // 1000,
                 ]}
                 wrapper="span"
                 speed={40}

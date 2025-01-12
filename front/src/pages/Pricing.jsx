@@ -9,9 +9,9 @@ const Pricing = () => {
   const { token, backendUrl } = useContext(AuthContext);
 
   const documents = [
-    { id: 1, title: "Document 1", fileName: "document1.pdf", price: 200 },
-    { id: 2, title: "Document 2", fileName: "document2.pdf", price: 200 },
-    { id: 3, title: "Document 3", fileName: "document3.pdf", price: 200 },
+    { id: 1, title: "Document 1", fileName: "Vidhanam doc.pdf", price: 200 },
+    { id: 2, title: "Document 2", fileName: "Vidhanam doc.pdf", price: 200 },
+    { id: 3, title: "Document 3", fileName: "Vidhanam doc.pdf", price: 200 },
   ];
 
   const handlePayment = async (doc) => {

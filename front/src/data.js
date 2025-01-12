@@ -31,36 +31,36 @@ export const blogData = [
   {
     id: "",
     img: blog_image1,
-    title: "What is a Will?",
-    desc: "A Will is a legal document where someone writes down their wishes about what should happen to their belongings after they pass away. The person can change or cancel their Will anytime during their lifetime, even if it's already registered.",
-    date: "Jan 4 2025",
-  },
-  {
-    id: "",
-    img: blog_image2,
     title: "What makes a Will valid?",
     desc: "Legal Document: The Will must follow the law and be made by someone who is legally allowed to do so. Property Details: It should clearly state how the person's property will be shared or used. After Death: The Will takes effect only after the person dies. Changeable: The person can update or cancel the Will at any time while they are alive.",
     date: "Jan 4 2025",
   },
   {
     id: "",
+    img: blog_image2,
+    title: "What is the Right to Information (RTI) ?",
+    desc: "RTI is a law that allows people to request information from government offices. It ensures transparency and holds the government accountable for its actions.",
+    date: "Jan 4 2025",
+  },
+  {
+    id: "",
     img: blog_image3,
-    title: "Does a Will need to be on stamp paper?",
-    desc: "No, a Will doesn’t have to be on stamp paper. It can be written on plain paper. The only requirement is that it must be signed by the person making it and two witnesses.",
+    title: "Who can file an RTI application?",
+    desc: "Any citizen of India can file an RTI application. Organizations or companies cannot file RTIs, but an individual can do so on their behalf.",
     date: "Jan 5 2025",
   },
   {
     id: "",
     img: blog_image4,
-    title: "Can a Will be challenged in court?",
-    desc: "Yes, a Will can be challenged if someone believes it was made under pressure, fraud, or when the person wasn’t of sound mind. It’s important to write the Will clearly and get legal advice to avoid disputes.",
+    title: "Importance of filling GST and how can it be done?",
+    desc: "Filing GST returns is essential for complying with tax laws, ensuring smooth business operations, and claiming input tax credits. It promotes transparency and helps businesses avoid penalties while contributing to the nation's economic growth.",
     date: "Jan 5 2025",
   },
   {
     id: "",
     img: blog_image5,
-    title: "What happens if I die without a Will?",
-    desc: "If you die without a Will, the law decides who gets your property based on inheritance rules, which may not match your wishes. This process is called intestate succession.",
+    title: "What is a Contract ?",
+    desc: "A contract is a legally binding agreement between two or more parties outlining their rights, duties, and obligations. It ensures clarity, accountability, and enforceability in business or personal dealings.",
     date: "Jan 5 2025",
   },
 ];
@@ -259,6 +259,42 @@ export const faqsList = [
   {
     q: "Can I include minor children in my Will?",
     a: "Yes, you can name a guardian for your minor children in your Will to make sure someone you trust takes care of them if something happens to you.",
+  },
+  {
+    q: "What is the Right to Information (RTI) ?",
+    a: "RTI is a law that allows people to request information from government offices. It ensures transparency and holds the government accountable for its actions.",
+  },
+  {
+    q: "Who can file an RTI application?",
+    a: "Any citizen of India can file an RTI application. Organizations or companies cannot file RTIs, but an individual can do so on their behalf.",
+  },
+  {
+    q: "Can someone file an RTI on my behalf?",
+    a: "No, the RTI must be filed by you. However, you can get help from someone to draft the application.",
+  },
+  {
+    q:"Can I ask questions about private companies under RTI?",
+    a:"No, RTI applies only to government bodies or organizations funded by the government. However, you can request information about private companies if it's held by a government office (e.g., tax or regulatory details)."
+  },
+  {
+    q: "Is there any format for filing RTI?",
+    a: "There’s no fixed format for an RTI application. Just write your questions in simple language, include your contact details, and address it to the relevant Public Information Officer (PIO).",
+  },
+  {
+    q: "Importance of filling GST and how can it be done?",
+    a: "Filing GST returns is essential for complying with tax laws, ensuring smooth business operations, and claiming input tax credits. It promotes transparency and helps businesses avoid penalties while contributing to the nation's economic growth.",
+  },
+  {
+    q: "How to File GST ?",
+    a: "GST can be filed online through the GST portal. Register your business, maintain accurate records of sales, purchases, and taxes paid, and submit the required forms within the due dates. Professional assistance can simplify the process.",
+  },
+  {
+    q: "What is a Contract ?",
+    a: "A contract is a legally binding agreement between two or more parties outlining their rights, duties, and obligations. It ensures clarity, accountability, and enforceability in business or personal dealings.",
+  },
+  {
+    q: "Why Draft a Contract ?",
+    a: "Drafting a contract protects the interests of all parties, minimizes misunderstandings, and serves as legal proof in case of disputes. A well-drafted contract provides security and builds trust in any transaction.",
   },
 ];
 
