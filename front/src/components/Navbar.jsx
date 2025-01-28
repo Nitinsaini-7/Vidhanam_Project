@@ -115,7 +115,9 @@ const Navbar = () => {
             <li className="hover:text-indigo-600 text-lg duration-200">
               <NavLink
                 to="/pricing"
-                onClick={() => setState(false)}
+                onClick={() => {setState(false);
+                  window.scroll(0, 0);
+                }}
                 className="block"
               >
                 <p>
