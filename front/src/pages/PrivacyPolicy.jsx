@@ -31,7 +31,7 @@ const PrivacyPolicy = () => {
         <section className="mb-6">
           <h2 className="text-xl font-semibold text-gray-700">4. Third-Party Services</h2>
           <p className="text-gray-600 mt-2">
-            For specific services, we may collaborate with trusted third-party vendors. All third-party activities will comply with our privacy standards.
+            For specific services, we may collaborate with trusted third-party vendors. All third-party activities will/वसीयत comply with our privacy standards.
           </p>
         </section>
 

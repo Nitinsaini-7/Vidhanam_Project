@@ -7,7 +7,7 @@ const Blog = () => {
     <section className="mt-20">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="text-center">
-          <Title text1={"Blogs"} />
+          <Title text1={"Blogs/ब्लॉग्स"} />
         </div>
         <ul className="grid mt-10 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 ">
           {blogData.map((items, index) => (

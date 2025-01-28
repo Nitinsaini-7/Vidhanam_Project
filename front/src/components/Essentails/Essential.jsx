@@ -9,28 +9,28 @@ import Title from "../Title";
 const Essential = () => {
   const items = [
     {
-      title: "Will",
+      title: "Will/वसीयत",
       image: will,
       description:
-        "Importance of creation of Will & what can be the procedure?",
+        "Importance of creation of Will/वसीयत & what can be the procedure?",
       path: "/will",
     },
     {
-      title: "Goods and Services Tax (GST)",
+      title: "Goods and Services Tax (GST/वस्तु और सेवा कर)",
       image: gst,
-      description: "Importance of filling GST and how can it be done?",
+      description: "Importance of filling GST/वस्तु और सेवा कर and how can it be done?",
       path: "/gst",
     },
     {
-      title: "Right to Information (RTI)",
+      title: "Right to Information (RTI/सूचना का अधिकार)",
       image: rti,
-      description: "What is RTI and How can it get done?",
+      description: "What is RTI/सूचना का अधिकार and How can it get done?",
       path: "/rti",
     },
     {
-      title: "Employment contract & Business contract",
+      title: "Employment contract & Business contract/रोजगार अनुबंध और व्यापार अनुबंध",
       image: ec_bc,
-      description: "What is the Contract and why to draft a contract?",
+      description: "What is the Contract/अनुबंध and why to draft a contract?",
       path: "/contracts",
     },
   ];
@@ -38,7 +38,7 @@ const Essential = () => {
   return (
     <div className="mt-10">
       <div className="text-center">
-        <Title text1={"Heading"} />
+        <Title text1={"Vidhanam Documents/विधानम दस्तावेज़"} />
       </div>
       <div className="flex flex-wrap justify-center gap-6 mt-10">
         {items.map((item, index) => (
@@ -75,7 +75,7 @@ const Essential = () => {
               {/* Button at the Bottom */}
               <div className="">
                 <Link
-                  className="bg-indigo-600 text-white text-sm font-semibold py-2 px-20 rounded-md w-full hover:bg-indigo-500 transition"
+                  className="bg-indigo-600 text-white text-sm font-semibold py-3 px-20 rounded-md w-full hover:bg-indigo-500 transition"
                   onClick={() => {
                     window.scroll(0, 0);
                   }}

@@ -120,7 +120,7 @@ const Navbar = () => {
               >
                 <p>
 
-                Pricing
+                Download Docs
                 </p>
               <hr className="w-4/4 border-none h-1 bg-indigo-600 hidden" />
               </NavLink>

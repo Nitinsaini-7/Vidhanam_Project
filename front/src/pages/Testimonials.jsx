@@ -28,7 +28,7 @@ const Testimonials = () => {
   return (
     <section className="mt-20">
       <div className="text-center">
-        <Title text1={"Testimonials"} />
+        <Title text1={"Testimonials/प्रशंसापत्र"} />
       </div>
 
       <Carousel

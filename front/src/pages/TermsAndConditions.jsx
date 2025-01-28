@@ -33,7 +33,7 @@ const TermsAndConditions = () => {
           <section>
             <h2 className="text-xl font-semibold text-gray-700">4. Refund Policy</h2>
             <p className="text-gray-600">
-              No refunds will be provided once work has commenced.
+              No refunds will/वसीयत be provided once work has commenced.
             </p>
             <p className="text-gray-600">
               Refunds are subject to review if services are not initiated due to unforeseen circumstances.
@@ -53,7 +53,7 @@ const TermsAndConditions = () => {
           <section>
             <h2 className="text-xl font-semibold text-gray-700">6. Limitation of Liability</h2>
             <p className="text-gray-600">
-              VidhaanamDocs.co.in will not be held responsible for errors resulting from inaccurate client information or misuse of the documents.
+              VidhaanamDocs.co.in will/वसीयत not be held responsible for errors resulting from inaccurate client information or misuse of the documents.
             </p>
           </section>
 

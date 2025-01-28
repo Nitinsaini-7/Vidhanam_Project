@@ -53,7 +53,7 @@ const Contact = () => {
   return (
     <div className="mt-20">
       <div className="text-center">
-        <Title text1={"Contact Us"} />
+        <Title text1={"Contact Us/हमसे संपर्क करें"} />
       </div>
       <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8 mt-10 lg:mt-0">
         <div className="max-w-lg mx-auto gap-20 justify-center lg:flex lg:max-w-none">

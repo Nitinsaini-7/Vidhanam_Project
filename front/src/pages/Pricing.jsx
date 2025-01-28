@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import Title from '../components/Title';
 
 const Pricing = () => {
   const { token, backendUrl } = useContext(AuthContext);
@@ -61,7 +62,7 @@ const Pricing = () => {
       razorpay.open();
     } catch (error) {
       console.error("Error initiating payment:", error);
-      alert("Payment failed. Please try again.");
+      toast.error("Payment failed. Please try again.");
     }
   };
 
@@ -73,21 +74,24 @@ const Pricing = () => {
   };
 
   return (
-    <div>
+      <div className="mt-20">
+      <div className="text-center">
+        <Title text1={"Download Documents/दस्तावेज़ डाउनलोड करें"} />
+      </div>
       {token ? (
-        <div className="flex flex-col mt-20 md:flex-row justify-center items-center gap-6 p-6">
+        <div className="flex flex-col w-full md:flex-row justify-center items-center mt-10 gap-6 p-6">
           {documents.map((doc) => (
             <div
               key={doc.id}
-              className="bg-white shadow-md rounded-lg p-4 max-w-xs text-center border border-gray-200"
+              className="bg-white shadow-md rounded-lg  p-4 max-w-lg text-center border border-gray-200"
             >
               <h3 className="text-lg font-semibold mb-2">{doc.title}</h3>
               <p className="text-gray-600 mb-4">Price: ₹{doc.price}</p>
               <button
                 onClick={() => handlePayment(doc)}
-                className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500 duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
               >
-                Pay & Download
+                Pay & Download/भुगतान करें और डाउनलोड करें
               </button>
             </div>
           ))}

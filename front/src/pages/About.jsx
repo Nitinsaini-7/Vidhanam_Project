@@ -11,7 +11,7 @@ const About = () => {
     <div className="mt-20">
       <div className="text-center">
 
-      <Title text1={"about"}/>
+      <Title text1={"about/हमारे बारे में"}/>
       </div>
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center pt-10">
         <div className="md:w-1/2 mb-8 md:mb-0">

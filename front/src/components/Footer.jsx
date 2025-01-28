@@ -62,7 +62,7 @@ const Footer = () => {
 
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
             <div className="text-center sm:text-left">
-              <p className="text-lg font-medium text-white">Quick Links</p>
+              <p className="text-lg font-medium text-white">Quick Links/त्वरित लिंक</p>
 
               <ul className="mt-8 space-y-4 text-sm">
                 <li>
@@ -73,7 +73,7 @@ const Footer = () => {
                       window.scroll(0, 0);
                     }}
                   >
-                    Testimonials
+                    Testimonials/प्रशंसापत्र
                   </Link>
                 </li>
 
@@ -85,7 +85,7 @@ const Footer = () => {
                       window.scroll(0, 0);
                     }}
                   >
-                    Blogs
+                    Blogs/ब्लॉग्स
                   </Link>
                 </li>
 
@@ -97,7 +97,7 @@ const Footer = () => {
                       window.scroll(0, 0);
                     }}
                   >
-                    Faqs
+                    Faqs/अक्सर पूछे जाने वाले प्रश्न
                   </Link>
                 </li>
 
@@ -109,7 +109,7 @@ const Footer = () => {
                       window.scroll(0, 0);
                     }}
                   >
-                    About Us
+                    About Us/हमारे बारे में
                   </Link>
                 </li>
 
@@ -121,14 +121,14 @@ const Footer = () => {
                       window.scroll(0, 0);
                     }}
                   >
-                    Contact Us
+                    Contact Us/हमसे संपर्क करें
                   </Link>
                 </li>
               </ul>
             </div>
 
             <div className="text-center sm:text-left">
-              <p className="text-lg font-medium text-white">Our Services</p>
+              <p className="text-lg font-medium text-white">Our Services/हमारी सेवाएँ</p>
 
               <ul className="mt-8 space-y-4 text-sm">
                 <li>
@@ -139,7 +139,7 @@ const Footer = () => {
                       window.scroll(0, 0);
                     }}
                   >
-                    Will
+                    Will/वसीयत
                   </Link>
                 </li>
 
@@ -151,7 +151,7 @@ const Footer = () => {
                       window.scroll(0, 0);
                     }}
                   >
-                    GST
+                    GST/वस्तु और सेवा कर
                   </Link>
                 </li>
 
@@ -163,7 +163,7 @@ const Footer = () => {
                       window.scroll(0, 0);
                     }}
                   >
-                    RTI
+                    RTI/सूचना का अधिकार
                   </Link>
                 </li>
 
@@ -175,14 +175,14 @@ const Footer = () => {
                       window.scroll(0, 0);
                     }}
                   >
-                    Contract
+                    Contract/अनुबंध
                   </Link>
                 </li>
               </ul>
             </div>
 
             <div className="text-center sm:text-left">
-              <p className="text-lg font-medium text-white">Helpful Links</p>
+              <p className="text-lg font-medium text-white">Helpful Links/सहायक लिंक</p>
 
               <ul className="mt-8 space-y-4 text-sm">
                 <li>
@@ -193,7 +193,7 @@ const Footer = () => {
                       window.scroll(0, 0);
                     }}
                   >
-                    Terms & Conditions
+                    Terms & Conditions/नियम और शर्तें
                   </Link>
                 </li>
 
@@ -205,7 +205,7 @@ const Footer = () => {
                       window.scroll(0, 0);
                     }}
                   >
-                    Privacy Policy
+                    Privacy Policy/गोपनीयता नीति
                   </Link>
                 </li>
                 <li>
@@ -216,14 +216,14 @@ const Footer = () => {
                       window.scroll(0, 0);
                     }}
                   >
-                    Disclaimer
+                    Disclaimer/अस्वीकरण
                   </Link>
                 </li>
               </ul>
             </div>
 
             <div className="text-center sm:text-left">
-              <p className="text-lg font-medium text-white">Contact Us</p>
+              <p className="text-lg font-medium text-white">Contact Us/हमसे संपर्क करें</p>
 
               <ul className="mt-8 space-y-4 text-sm">
                 <li>
