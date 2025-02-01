@@ -152,25 +152,25 @@ export const testimonialsData = [
   {
     name: "Bharat",
     service: "Rental Agreement",
-    image: `${testimonials1}`,
-    desc: " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quibusdam, eligendi exercitationem molestias possimus facere.",
+    
+    desc: "Simple, fast, and reliable service for drafting a will online.",
   },
   {
     name: "Aarti",
     service: "Rental Agreement",
-    image: `${testimonials2}`,
-    desc: " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quibusdam, eligendi exercitationem molestias possimus facere.",
+    
+    desc: " Saved me time and money. Excellent legal document service!",
   },
   {
     name: "Saurabh",
     service: "Food License",
-    image: `${testimonials1}`,
-    desc: " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quibusdam, eligendi exercitationem molestias possimus facere.",
+    
+    desc: "Affordable and high-quality legal drafts. Truly helpful! ",
   },
   {
     name: "Rakhi",
     service: "Company Incorporation",
-    image: `${testimonials2}`,
-    desc: " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quibusdam, eligendi exercitationem molestias possimus facere.",
+    
+    desc: "Downloaded my document in minutes—superb service! ",
   },
 ];

@@ -14,15 +14,15 @@ const Contact = () => {
   const contactMethods = [
     {
       icon: faEnvelope,
-      contact: "Support@example.com",
+      contact: "vidhanamdocs@gmail.com",
     },
     {
       icon: faPhone,
-      contact: "+1 (555) 000-000",
+      contact: "+91-9220306753",
     },
     {
       icon: faLocationDot,
-      contact: "Mountain View, California, United State.",
+      contact: "Sector 119, Noida",
     },
   ];
 

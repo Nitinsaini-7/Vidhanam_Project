@@ -227,17 +227,17 @@ const Footer = () => {
 
               <ul className="mt-8 space-y-4 text-sm">
                 <li>
-                  <Link className="" to="mailto:saini00nitin@gmail.com">
+                  <Link className=" md:flex items-center" to="mailto:vidhanamdocs@gmail.com">
                     <FontAwesomeIcon className="text-white" icon={faEnvelope} />
 
-                    <span className="flex-1 text-white ml-2">john@doe.com</span>
+                    <span className="flex-1 text-white ml-2">vidhanamdocs@gmail.com</span>
                   </Link>
                 </li>
 
                 <li>
-                  <Link className="" to="tel:7452863255">
+                  <Link className="" to="tel:9220306753">
                     <FontAwesomeIcon className="text-white" icon={faPhone} />
-                    <span className="flex-1 text-white ml-2">0123456789</span>
+                    <span className="flex-1 text-white ml-2">9220306753</span>
                   </Link>
                 </li>
 
@@ -248,7 +248,7 @@ const Footer = () => {
                       icon={faLocationDot}
                     />
                     <span className="flex-1 text-white ml-2">
-                      213 Lane, London, United Kingdom
+                    Sector 119, Noida
                     </span>
                   </Link>
                 </li>
