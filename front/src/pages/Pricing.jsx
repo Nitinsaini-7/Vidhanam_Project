@@ -1,13 +1,14 @@
 import React from "react";
-import Login from "./Login";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import axios from "axios";
 import { toast } from "react-toastify";
 import Title from "../components/Title";
+import { Link } from "react-router-dom";
+import whatsappImg from "../assets/images/whatsapp.png";
 
 const Pricing = () => {
-  const { token, backendUrl } = useContext(AuthContext);
+  const { backendUrl } = useContext(AuthContext);
 
   const documents = [
     {
@@ -16,7 +17,9 @@ const Pricing = () => {
       buttonValue: "Pay & Download in English",
       title: "Car Sale Agreement",
       fileName: "Car Sale Agreement.pdf",
-      price: 199,
+      price: 399,
+      discountPrice: 199,
+
     },
     {
       id: 2,
@@ -24,7 +27,9 @@ const Pricing = () => {
       buttonValue: "Pay & Download in English",
       title: "Family Settlement deed",
       fileName: "Family Settlement deed.pdf",
-      price: 199,
+      price: 399,
+      discountPrice: 199,
+
     },
     {
       id: 3,
@@ -32,7 +37,9 @@ const Pricing = () => {
       buttonValue: "Pay & Download in English",
       title: "RENT AGREEMENT",
       fileName: "RENT AGREEMENT.pdf",
-      price: 199,
+      price: 399,
+      discountPrice: 199,
+
     },
     {
       id: 4,
@@ -40,43 +47,95 @@ const Pricing = () => {
       buttonValue: "Pay & Download in English",
       title: "Will draft.pdf",
       fileName: "Will draft.pdf",
-      price: 199,
+      price: 399,
+      discountPrice: 199,
+
     },
+
     {
       id: 5,
-      cost: "कीमत",
-      buttonValue: "भुगतान करें और डाउनलोड करें हिंदी में",
-      title: "कार बिक्री अनुबंध",
-      fileName: "कार बिक्री अनुबंध.pdf",
-      price: 199,
+      cost: "Price",
+      buttonValue: "Pay & Download in English",
+      title: "EMPLOYMENT CONTRACT AGREEMENT",
+      fileName: "EMPLOYMENT CONTRACT AGREEMENT.pdf",
+      price: 399,
+      discountPrice: 199,
+
     },
+
     {
       id: 6,
-      cost: "कीमत",
-      buttonValue: "भुगतान करें और डाउनलोड करें हिंदी में",
-      title: "किराया अनुबंध",
-      fileName: "किराया अनुबंध.pdf",
-      price: 199,
+      cost: "Price",
+      buttonValue: "Pay & Download in English",
+      title: "Mutual consent divorce agreement",
+      fileName: "Mutual consent divorce agreement.pdf",
+      price: 399,
+      discountPrice: 199,
+
     },
+
     {
       id: 7,
       cost: "कीमत",
       buttonValue: "भुगतान करें और डाउनलोड करें हिंदी में",
-      title: "पारिवारिक समझौता विलेख",
-      fileName: "पारिवारिक समझौता विलेख.pdf",
-      price: 199,
+      title: "नियुक्ति अनुबंध",
+      fileName: "नियुक्ति अनुबंध.pdf",
+      price: 399,
+      discountPrice: 199,
+
     },
+
     {
       id: 8,
       cost: "कीमत",
       buttonValue: "भुगतान करें और डाउनलोड करें हिंदी में",
+      title: "तलाक आपसी सहमति",
+      fileName: "तलाक आपसी सहमति.pdf",
+      price: 399,
+      discountPrice: 199,
+
+    },
+
+    {
+      id: 9,
+      cost: "कीमत",
+      buttonValue: "भुगतान करें और डाउनलोड करें हिंदी में",
+      title: "कार बिक्री अनुबंध",
+      fileName: "कार बिक्री अनुबंध.pdf",
+      price: 399,
+      discountPrice: 199,
+
+    },
+    {
+      id: 10,
+      cost: "कीमत",
+      buttonValue: "भुगतान करें और डाउनलोड करें हिंदी में",
+      title: "किराया अनुबंध",
+      fileName: "किराया अनुबंध.pdf",
+      price: 399,
+      discountPrice: 199,
+
+    },
+    {
+      id: 11,
+      cost: "कीमत",
+      buttonValue: "भुगतान करें और डाउनलोड करें हिंदी में",
+      title: "पारिवारिक समझौता विलेख",
+      fileName: "पारिवारिक समझौता विलेख.pdf",
+      price: 399,
+      discountPrice: 199,
+
+    },
+    {
+      id: 12,
+      cost: "कीमत",
+      buttonValue: "भुगतान करें और डाउनलोड करें हिंदी में",
       title: "वसीयत का मसौदा",
       fileName: "वसीयत का मसौदा.pdf",
-      price: 199,
+      price: 399,
+      discountPrice: 199,
+
     },
-    // { id: 3, title: "Document 3", fileName: "RENT AGREEMENT.pdf", price: 199 },
-    // { id: 3, title: "Document 3", fileName: "RENT AGREEMENT.pdf", price: 199 },
-    // { id: 3, title: "Document 3", fileName: "RENT AGREEMENT.pdf", price: 199 },
   ];
 
   const handlePayment = async (doc) => {
@@ -84,8 +143,7 @@ const Pricing = () => {
       // Create an order on the server
       const { data: order } = await axios.post(
         `${backendUrl}/api/payment/create-order`,
-        { amount: doc.price },
-        { headers: { Authorization: `Bearer ${token}` } } // Pass token for authentication
+        { amount: doc.discountPrice }
       );
 
       // Open Razorpay payment modal
@@ -101,8 +159,7 @@ const Pricing = () => {
             // Verify payment on the server
             const verifyResponse = await axios.post(
               `${backendUrl}/api/payment/verify-payment`,
-              response,
-              { headers: { Authorization: `Bearer ${token}` } }
+              response
             );
 
             if (verifyResponse.data.success) {
@@ -115,11 +172,7 @@ const Pricing = () => {
             toast.error(err);
           }
         },
-        // prefill: {
-        //   name: "Your Name",
-        //   email: "your.email@example.com",
-        //   contact: "1234567890",
-        // },
+        
       };
 
       const razorpay = new window.Razorpay(options);
@@ -161,38 +214,75 @@ const Pricing = () => {
               Grab Your Discount Now!
             </button>
           </div>
-        <div className="flex items-center justify-center">
-          <h2 className="text-center text-yellow-400 text-5xl md:text-7xl py-2 tracking-tighter font-bold">
-            Up to {""}
-            <br className="sm:hidden" />
-            50% Off
-          </h2>
-        </div>
+          <div className="flex items-center justify-center">
+            <h2 className="text-center text-yellow-400 text-5xl md:text-7xl py-2 tracking-tighter font-bold">
+              Up to {""}
+              <br className="sm:hidden" />
+              50% Off
+            </h2>
+          </div>
         </div>
       </div>
-      {token ? (
-        <div className="w-full grid md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
-          {documents.map((doc) => (
-            <div
-              key={doc.id}
-              className="bg-slate-100 shadow-md rounded-lg  p-4 max-w-lg text-center"
+
+      <div className="w-full grid md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
+        {documents.map((doc) => (
+          <div
+            key={doc.id}
+            className="bg-slate-100 shadow-md rounded-lg  p-4 max-w-lg text-center"
+          >
+            <h3 className="text-xl font-semibold mb-5">{doc.title}</h3>
+            <p className="text-green-600 font-semibold text-2xl pb-2">
+              {doc.cost}: ₹{doc.discountPrice}
+              <span class="text-lg text-red-700 line-through p-2">₹{doc.price}</span>
+            </p>
+            <button
+              onClick={() => handlePayment(doc)}
+              className="bg-indigo-600 text-white text-sm px-6 py-2 rounded-lg hover:bg-indigo-500 duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
             >
-              <h3 className="text-xl font-semibold mb-5">{doc.title}</h3>
-              <p className="text-green-500 font-semibold text-2xl pb-2">
-                {doc.cost}: ₹{doc.price}
-              </p>
-              <button
-                onClick={() => handlePayment(doc)}
-                className="bg-indigo-600 text-white text-sm px-6 py-2 rounded-lg hover:bg-indigo-500 duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
-              >
-                {doc.buttonValue}
-              </button>
-            </div>
-          ))}
+              {doc.buttonValue}
+            </button>
+          </div>
+        ))}
+      </div>
+
+      <div className=" p-4">
+      <div className="bg-slate-200 rounded-md  p-6 ">
+        <h2 className="text-3xl text-gray-800  font-bold">NOTE-</h2>
+        <h2 className="text-2xl font-bold text-indigo-600">Legal Drafting Subscription Offer</h2>
+        <p className="text-gray-600">
+          Get minor legal drafts done under your subscription at no extra cost!
+          If you need major changes or customizations, additional charges will apply.
+        </p>
+        <p className="text-gray-600 mb-2">
+        For quick and hassle-free legal drafting, contact us today!
+        <span className="flex items-center gap-1 font-semibold">
+          Contact Us:
+          <img src={whatsappImg} className="w-5" alt="" />
+          <Link to={`tel:9220306753`} className="text-blue-600 ">
+          9220306753
+          </Link>
+        </span>
+        </p>
+
+        <div className="pt-10">
+          <h2 className="text-3xl font-bold text-gray-800">नोट-</h2>
+        <h2 className="text-2xl font-bold text-indigo-600">लीगल ड्राफ्टिंग सब्सक्रिप्शन ऑफर</h2>
+        <p className="text-gray-600">
+          आपकी सदस्यता में छोटे-मोटे कानूनी ड्राफ्ट बिना किसी अतिरिक्त शुल्क के किए जाएंगे! यदि आपको बड़े बदलाव या कस्टमाइज़ेशन की आवश्यकता है, तो इसके लिए अतिरिक्त शुल्क लागू होंगे।
+        </p>
+        <p className="text-gray-600 mb-4">तुरंत और सुविधा के साथ कानूनी ड्राफ्टिंग के लिए आज ही संपर्क करें!
+        <span className=" flex items-center gap-1 font-semibold">
+        हमसे संपर्क करें:
+        <img src={whatsappImg} className="w-5" alt="" />
+          <Link to={`tel:9220306753`} className="text-blue-600">
+          9220306753
+          </Link>
+        </span>
+        </p>
+
         </div>
-      ) : (
-        <Login />
-      )}
+      </div>
+    </div>
     </div>
   );
 };
