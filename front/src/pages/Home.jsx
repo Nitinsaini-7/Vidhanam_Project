@@ -5,11 +5,13 @@ import Essential from '../components/Essentails/Essential'
 import Testimonials from './Testimonials'
 import Blog from './blog/Blog'
 import Faqs from './faqs/Faqs'
+import Banner from '../components/Banner'
 
 const Home = () => {
   return (
     <div>
       <Hero/>
+      <Banner/>
       <Essential/>
       {/* <HowItWorks/> */}
       <Testimonials/>
