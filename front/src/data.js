@@ -150,25 +150,25 @@ export const essentialData = [
 
 export const testimonialsData = [
   {
-    name: "Bharat",
+    name: "Mr. Ranjeet",
     service: "Rental Agreement",
     
     desc: "Simple, fast, and reliable service for drafting a will online.",
   },
   {
-    name: "Aarti",
+    name: "Mrs. Aarti",
     service: "Rental Agreement",
     
     desc: " Saved me time and money. Excellent legal document service!",
   },
   {
-    name: "Saurabh",
+    name: "Mr. Saurabh",
     service: "Food License",
     
     desc: "Affordable and high-quality legal drafts. Truly helpful! ",
   },
   {
-    name: "Rakhi",
+    name: "Mrs. Rakhi",
     service: "Company Incorporation",
     
     desc: "Downloaded my document in minutes—superb service! ",

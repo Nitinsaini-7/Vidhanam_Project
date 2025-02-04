@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import whatsappImg from "../assets/images/whatsapp.png";
 
 const Pricing = () => {
-  const { backendUrl } = useContext(AuthContext);
+  const {token, backendUrl } = useContext(AuthContext);
 
   const documents = [
     {
@@ -23,10 +23,10 @@ const Pricing = () => {
     },
     {
       id: 2,
-      cost: "Price",
-      buttonValue: "Pay & Download in English",
-      title: "Family Settlement deed",
-      fileName: "Family Settlement deed.pdf",
+      cost: "कीमत",
+      buttonValue: "भुगतान करें और डाउनलोड करें हिंदी में",
+      title: "कार बिक्री अनुबंध",
+      fileName: "कार बिक्री अनुबंध.pdf",
       price: 399,
       discountPrice: 199,
 
@@ -35,25 +35,65 @@ const Pricing = () => {
       id: 3,
       cost: "Price",
       buttonValue: "Pay & Download in English",
-      title: "RENT AGREEMENT",
-      fileName: "RENT AGREEMENT.pdf",
+      title: "Family Settlement deed",
+      fileName: "Family Settlement deed.pdf",
+      price: 399,
+      discountPrice: 199,
+      
+    },
+    {
+      id: 4,
+      cost: "कीमत",
+      buttonValue: "भुगतान करें और डाउनलोड करें हिंदी में",
+      title: "पारिवारिक समझौता विलेख",
+      fileName: "पारिवारिक समझौता विलेख.pdf",
       price: 399,
       discountPrice: 199,
 
     },
     {
-      id: 4,
+      id: 5,
+      cost: "Price",
+      buttonValue: "Pay & Download in English",
+      title: "RENT AGREEMENT",
+      fileName: "RENT AGREEMENT.pdf",
+      price: 399,
+      discountPrice: 199,
+      
+    },
+    {
+      id: 6,
+      cost: "कीमत",
+      buttonValue: "भुगतान करें और डाउनलोड करें हिंदी में",
+      title: "किराया अनुबंध",
+      fileName: "किराया अनुबंध.pdf",
+      price: 399,
+      discountPrice: 199,
+
+    },
+    {
+      id: 7,
       cost: "Price",
       buttonValue: "Pay & Download in English",
       title: "Will draft.pdf",
       fileName: "Will draft.pdf",
       price: 399,
       discountPrice: 199,
+      
+    },
+    {
+      id: 8,
+      cost: "कीमत",
+      buttonValue: "भुगतान करें और डाउनलोड करें हिंदी में",
+      title: "वसीयत का मसौदा",
+      fileName: "वसीयत का मसौदा.pdf",
+      price: 399,
+      discountPrice: 199,
 
     },
 
     {
-      id: 5,
+      id: 9,
       cost: "Price",
       buttonValue: "Pay & Download in English",
       title: "EMPLOYMENT CONTRACT AGREEMENT",
@@ -64,7 +104,17 @@ const Pricing = () => {
     },
 
     {
-      id: 6,
+      id: 10,
+      cost: "कीमत",
+      buttonValue: "भुगतान करें और डाउनलोड करें हिंदी में",
+      title: "नियुक्ति अनुबंध",
+      fileName: "नियुक्ति अनुबंध.pdf",
+      price: 399,
+      discountPrice: 199,
+
+    },
+    {
+      id: 11,
       cost: "Price",
       buttonValue: "Pay & Download in English",
       title: "Mutual consent divorce agreement",
@@ -74,19 +124,9 @@ const Pricing = () => {
 
     },
 
-    {
-      id: 7,
-      cost: "कीमत",
-      buttonValue: "भुगतान करें और डाउनलोड करें हिंदी में",
-      title: "नियुक्ति अनुबंध",
-      fileName: "नियुक्ति अनुबंध.pdf",
-      price: 399,
-      discountPrice: 199,
-
-    },
 
     {
-      id: 8,
+      id: 12,
       cost: "कीमत",
       buttonValue: "भुगतान करें और डाउनलोड करें हिंदी में",
       title: "तलाक आपसी सहमति",
@@ -96,46 +136,6 @@ const Pricing = () => {
 
     },
 
-    {
-      id: 9,
-      cost: "कीमत",
-      buttonValue: "भुगतान करें और डाउनलोड करें हिंदी में",
-      title: "कार बिक्री अनुबंध",
-      fileName: "कार बिक्री अनुबंध.pdf",
-      price: 399,
-      discountPrice: 199,
-
-    },
-    {
-      id: 10,
-      cost: "कीमत",
-      buttonValue: "भुगतान करें और डाउनलोड करें हिंदी में",
-      title: "किराया अनुबंध",
-      fileName: "किराया अनुबंध.pdf",
-      price: 399,
-      discountPrice: 199,
-
-    },
-    {
-      id: 11,
-      cost: "कीमत",
-      buttonValue: "भुगतान करें और डाउनलोड करें हिंदी में",
-      title: "पारिवारिक समझौता विलेख",
-      fileName: "पारिवारिक समझौता विलेख.pdf",
-      price: 399,
-      discountPrice: 199,
-
-    },
-    {
-      id: 12,
-      cost: "कीमत",
-      buttonValue: "भुगतान करें और डाउनलोड करें हिंदी में",
-      title: "वसीयत का मसौदा",
-      fileName: "वसीयत का मसौदा.pdf",
-      price: 399,
-      discountPrice: 199,
-
-    },
   ];
 
   const handlePayment = async (doc) => {
@@ -143,7 +143,8 @@ const Pricing = () => {
       // Create an order on the server
       const { data: order } = await axios.post(
         `${backendUrl}/api/payment/create-order`,
-        { amount: doc.discountPrice }
+        { amount: doc.discountPrice },
+        { headers: { Authorization: `Bearer ${token}` } }
       );
 
       // Open Razorpay payment modal
@@ -159,7 +160,9 @@ const Pricing = () => {
             // Verify payment on the server
             const verifyResponse = await axios.post(
               `${backendUrl}/api/payment/verify-payment`,
-              response
+              response,
+              { headers: { Authorization: `Bearer ${token}` } }
+              
             );
 
             if (verifyResponse.data.success) {
@@ -224,7 +227,7 @@ const Pricing = () => {
         </div>
       </div>
 
-      <div className="w-full grid md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
+      <div className="w-full grid md:grid-cols-2 gap-6 p-6">
         {documents.map((doc) => (
           <div
             key={doc.id}
@@ -233,7 +236,7 @@ const Pricing = () => {
             <h3 className="text-xl font-semibold mb-5">{doc.title}</h3>
             <p className="text-green-600 font-semibold text-2xl pb-2">
               {doc.cost}: ₹{doc.discountPrice}
-              <span class="text-lg text-red-700 line-through p-2">₹{doc.price}</span>
+              <span className="text-lg text-red-700 line-through p-2">₹{doc.price}</span>
             </p>
             <button
               onClick={() => handlePayment(doc)}

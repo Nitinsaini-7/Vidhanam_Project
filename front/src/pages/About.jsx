@@ -34,37 +34,37 @@ const About = () => {
         </div>
 
           <ul className="mt-5 flex justify-center gap-6 sm:justify-start md:gap-6">
-            <li className=" bg-white rounded-full shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] w-12 h-12 cursor-pointer group flex items-center justify-center">
+            <Link to={""} className=" bg-white rounded-full shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] w-12 h-12 cursor-pointer group flex items-center justify-center">
               <img
                 className="w-8 p-1 group-hover:w-9 duration-200"
                 src={linkedin}
                 alt=""
               />
-            </li>
+            </Link>
 
-            <li className="bg-white rounded-full shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] w-12 h-12 cursor-pointer group flex items-center justify-center">
+            <Link to={"https://x.com/vidhanamdocs"} className="bg-white rounded-full shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] w-12 h-12 cursor-pointer group flex items-center justify-center">
               <img
                 className="w-8 p-1 group-hover:w-9 duration-200"
                 src={x}
                 alt=""
               />
-            </li>
+            </Link>
 
-            <li className="bg-white rounded-full shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] w-12 h-12 cursor-pointer group flex items-center justify-center">
+            <Link to={"https://www.instagram.com/vidhanamdocs"} className="bg-white rounded-full shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] w-12 h-12 cursor-pointer group flex items-center justify-center">
               <img
                 className="w-8 p-1 group-hover:w-9 duration-200"
                 src={instagram}
                 alt=""
               />
-            </li>
+            </Link>
 
-            <li className="bg-white rounded-full shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] w-12 h-12 cursor-pointer group flex items-center justify-center">
+            <Link to={"https://www.facebook.com/profile.php?id=61572418605596&sk=about"} className="bg-white rounded-full shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] w-12 h-12 cursor-pointer group flex items-center justify-center">
               <img
                 className="w-8 p-1 group-hover:w-9 duration-200"
                 src={facebook}
                 alt=""
               />
-            </li>
+            </Link>
           </ul>
 
           <div className="mt-8">
